@@ -1,0 +1,18 @@
+/* Yazıyı ortalamak ve stil eklemek */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Yazı stili */
+.merhaba {
+  color: #ff5733; /* Turuncu renk */
+  font-size: 48px; /* Yazı büyüklüğü */
+  font-weight: bold; /* Kalın yazı */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Hafif gölge */
+}

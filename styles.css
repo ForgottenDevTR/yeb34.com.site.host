@@ -1,18 +1,52 @@
-/* Yazıyı ortalamak ve stil eklemek */
+/* Genel sıfırlama ve stil */
 body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/* Menü stilizasyonu */
+.navbar {
+  background-color: #333; /* Koyu arka plan */
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  color: #ff5733; /* Menüyü üzerine geldiğinde renk değişir */
+}
+
+/* Yazı kısmı */
+.content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
+  height: calc(100vh - 50px); /* Menü alanını hesaba kat */
+  margin-top: 50px;
+  text-align: center;
 }
 
-/* Yazı stili */
 .merhaba {
   color: #ff5733; /* Turuncu renk */
-  font-size: 48px; /* Yazı büyüklüğü */
-  font-weight: bold; /* Kalın yazı */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Hafif gölge */
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }

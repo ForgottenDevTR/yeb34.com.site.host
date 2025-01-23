@@ -45,7 +45,7 @@ body {
 }
 
 .container img {
-  float: left; /* Resim sola yaslanır */
+  float: center; /* Resim sola yaslanır */
   margin-right: 20px; /* Resim ile metin arasında boşluk bırakır */
 }
 

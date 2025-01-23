@@ -42,6 +42,7 @@ body {
   height: calc(100vh - 50px); /* Menü alanını hesaba kat */
   margin-top: 50px;
   text-align: center;
+  image-align: top;
 }
 
 .container img {

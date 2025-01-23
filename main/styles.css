@@ -1,0 +1,60 @@
+/* Genel sıfırlama ve stil */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/* Menü stilizasyonu */
+.navbar {
+  background-color: #333; /* Koyu arka plan */
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  color: #ff5733; /* Menüyü üzerine geldiğinde renk değişir */
+}
+
+/* Yazı kısmı */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 50px); /* Menü alanını hesaba kat */
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+.merhaba {
+  color: #000000; /* Turuncu renk */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+.yazı {
+ color: #000000;
+ font-size: 20px;
+ font-weight:bold;
+}

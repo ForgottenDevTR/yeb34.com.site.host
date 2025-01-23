@@ -45,8 +45,7 @@ body {
 }
 
 .merhaba {
-  color: #ff5733; /* Turuncu renk */
-  font-size: 48px;
+  color: #000000; /* Turuncu renk */
+  font-size: 20px;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }

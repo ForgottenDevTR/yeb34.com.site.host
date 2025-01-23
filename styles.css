@@ -44,10 +44,6 @@ body {
   text-align: center;
 }
 
-.container img {
-  float: left; /* Resim sola yaslanır */
-  margin-right: 20px; /* Resim ile metin arasında boşluk bırakır */
-}
 
 .merhaba {
   color: #000000; /* Turuncu renk */

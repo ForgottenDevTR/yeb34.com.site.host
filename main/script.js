@@ -1,25 +1,60 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+// Kayıt formu işleyicisi
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Formun otomatik gönderilmesini engelle
 
-app.use(express.urlencoded({ extended: true }));  // URL-encoded verileri işlemek için
-app.use(express.json());  // JSON verileri işlemek için
+  var username = document.getElementById("signupUsername").value;
+  var password = document.getElementById("signupPassword").value;
+  var errorMessage = "";
 
-// POST isteği işleyici
-app.post('/main/onay', (req, res) => {
-  const username = req.body.username;
-  const password = req.body.password;
-  
-  // Verileri kontrol etme ve işleme
-  if (username && password) {
-    res.send('Veriler alındı: ' + username + ', ' + password);
-  } else {
-    res.status(400).send('Veriler eksik!');
+  // Verileri kontrol et
+  if (username === "" || password === "") {
+    errorMessage = "Kullanıcı adı ve şifre alanları boş bırakılamaz!";
+  } else if (username.length < 5) {
+    errorMessage = "Kullanıcı adı en az 5 karakter olmalıdır!";
+  } else if (password.length < 6) {
+    errorMessage = "Şifre en az 6 karakter olmalıdır!";
   }
+
+  if (errorMessage !== "") {
+    alert(errorMessage);
+    return false; // Formu gönderme
+  }
+
+  // Verileri URL parametreleri olarak GET isteğiyle gönder
+  var formAction = document.getElementById("signupForm").action;
+  var url = formAction + "?username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password);
+
+  // Yeni URL ile yönlendirme (GET isteği)
+  window.location.href = url; // Tarayıcıyı bu URL'ye yönlendir
 });
 
-// Sunucu başlatma
-app.listen(port, () => {
-  console.log(`Sunucu http://localhost:${port} adresinde çalışıyor`);
+// Giriş formu işleyicisi
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Formun otomatik gönderilmesini engelle
+
+  var username = document.getElementById("loginUsername").value;
+  var password = document.getElementById("loginPassword").value;
+  var errorMessage = "";
+
+  // Verileri kontrol et
+  if (username === "" || password === "") {
+    errorMessage = "Kullanıcı adı ve şifre alanları boş bırakılamaz!";
+  } else if (username.length < 5) {
+    errorMessage = "Kullanıcı adı en az 5 karakter olmalıdır!";
+  } else if (password.length < 6) {
+    errorMessage = "Şifre en az 6 karakter olmalıdır!";
+  }
+
+  if (errorMessage !== "") {
+    alert(errorMessage);
+    return false; // Formu gönderme
+  }
+
+  // Verileri URL parametreleri olarak GET isteğiyle gönder
+  var formAction = document.getElementById("loginForm").action;
+  var url = formAction + "?username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password);
+
+  // Yeni URL ile yönlendirme (GET isteği)
+  window.location.href = url; // Tarayıcıyı bu URL'ye yönlendir
 });
 

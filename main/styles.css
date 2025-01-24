@@ -35,7 +35,7 @@ body {
 }
 
 .navbar ul li a:hover {
-  color: #ff5733; /* Menüyü üzerine geldiğinde renk değişir */
+  color: #FF0000; /* Menüyü üzerine geldiğinde renk değişir */
 }
 
 /* İçerik kısmı */

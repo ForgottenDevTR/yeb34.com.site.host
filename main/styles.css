@@ -12,8 +12,12 @@ body {
 
 /* Menü stilizasyonu */
 .navbar {
-  background-color: #C0C0C0; /* Koyu arka plan */
+  background-color: transparent; /* Navbar'ın arka planını transparan yapıyoruz */
   padding: 10px 0;
+  position: absolute; /* Navbar'ın sayfa üzerinde sabit kalmasını sağlamak */
+  top: 0; /* Navbar'ı sayfanın üst kısmına hizalayalım */
+  width: 100%; /* Navbar'ın tüm genişliği kapsaması için */
+  z-index: 1; /* Navbar'ın diğer öğelerin üzerinde olmasını sağla */
 }
 
 .navbar ul {
@@ -44,18 +48,6 @@ body {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 50px); /* Menü alanını hesaba kat */
-  margin-top: 50px;
+  margin-top: 50px; /* Navbar'ın altına yerleşmesi için */
   text-align: center;
-  background-color: rgba(192, 192, 192, 0.8); /* İçerik kısmına yarı şeffaf arka plan */
-  padding: 20px;
-  border-radius: 15px; /* Köşeleri yuvarlatmak */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge ekleme */
-}
-
-/* Merhaba mesajı */
-.merhaba {
-  color: #000;
-  font-size: 24px;
-  font-weight: bold;
-}
-
+  background-color: rgba(192, 192, 192, 0.8); /* İçerik kısmına yarı

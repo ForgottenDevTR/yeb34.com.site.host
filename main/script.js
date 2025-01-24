@@ -1,27 +1,25 @@
-// script.js
+const express = require('express');
+const app = express();
+const port = 3000;
 
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Formun otomatik olarak gönderilmesini engelle
+app.use(express.urlencoded({ extended: true }));  // URL-encoded verileri işlemek için
+app.use(express.json());  // JSON verileri işlemek için
 
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-
-  var errorMessage = "";
-
-  if (username === "" || password === "") {
-    errorMessage = "Kullanıcı adı ve şifre alanları boş bırakılamaz!";
-  } else if (username.length < 5) {
-    errorMessage = "Kullanıcı adı en az 5 karakter olmalıdır!";
-  } else if (password.length < 6) {
-    errorMessage = "Şifre en az 6 karakter olmalıdır!";
+// POST isteği işleyici
+app.post('/main/onay', (req, res) => {
+  const username = req.body.username;
+  const password = req.body.password;
+  
+  // Verileri kontrol etme ve işleme
+  if (username && password) {
+    res.send('Veriler alındı: ' + username + ', ' + password);
+  } else {
+    res.status(400).send('Veriler eksik!');
   }
+});
 
-  if (errorMessage !== "") {
-    alert(errorMessage);
-    return false; // Formu gönderme
-  }
-
-  // Hata yoksa, formu gönder
-  document.getElementById("loginForm").submit();
+// Sunucu başlatma
+app.listen(port, () => {
+  console.log(`Sunucu http://localhost:${port} adresinde çalışıyor`);
 });
 

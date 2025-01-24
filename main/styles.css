@@ -3,8 +3,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: url("images/yazilim.jpg") no-repeat center center fixed; /* Background image */
-  background-size: cover; /* Ensure the background covers the entire area */
+  background-color: #f0f0f0; /* Genel sayfa için gri renk */
+  background-image: url("images/background.jpg"); /* Sayfa arka plan resmi */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* Arka planın tüm sayfayı kaplaması */
 }
 
 /* Menü stilizasyonu */
@@ -26,7 +29,7 @@ body {
 }
 
 .navbar ul li a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 18px;
 }
@@ -35,7 +38,7 @@ body {
   color: #ff5733; /* Menüyü üzerine geldiğinde renk değişir */
 }
 
-/* Yazı kısmı */
+/* İçerik kısmı */
 .content {
   display: flex;
   justify-content: center;
@@ -43,25 +46,16 @@ body {
   height: calc(100vh - 50px); /* Menü alanını hesaba kat */
   margin-top: 50px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* İçerik kısmına yarı şeffaf arka plan */
+  padding: 20px;
+  border-radius: 15px; /* Köşeleri yuvarlatmak */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge ekleme */
 }
 
 /* Merhaba mesajı */
 .merhaba {
-  color: #000000;
+  color: #000;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
-/* Yazı kısmı */
-.yazı {
-  color: #000000;
-  font-size: 20px;
-  font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.8); /* Yarı şeffaf beyaz arka plan */
-  padding: 20px;
-  border-radius: 15px; /* Yuvarlatılmış köşeler */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-  max-width: 80%; /* Yazı alanının genişliği */
-  margin: 0 auto; /* Ortalamak */
-}

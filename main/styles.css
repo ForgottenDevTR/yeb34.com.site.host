@@ -3,11 +3,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
-  background-image: url("images/yazilim.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url("images/yazilim.jpg") no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Ensure the background covers the entire area */
 }
 
 /* Menü stilizasyonu */
@@ -48,17 +45,23 @@ body {
   text-align: center;
 }
 
-
+/* Merhaba mesajı */
 .merhaba {
-  color: #000000; /* Turuncu renk */
-  font-size: 20px;
+  color: #000000;
+  font-size: 24px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
-
-
+/* Yazı kısmı */
 .yazı {
- color: #000000;
- font-size: 20px;
- font-weight:bold;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8); /* Yarı şeffaf beyaz arka plan */
+  padding: 20px;
+  border-radius: 15px; /* Yuvarlatılmış köşeler */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  max-width: 80%; /* Yazı alanının genişliği */
+  margin: 0 auto; /* Ortalamak */
 }

@@ -39,3 +39,19 @@
 .navbar ul li a:active {
   background-color: #CC0000; /* Buton basıldığında daha koyu kırmızı */
 }
+
+.content {
+  display: flex;
+  justify-content: center; /* Yatayda ortalar */
+  align-items: center; /* Dikeyde ortalar */
+  height: calc(100vh - 50px); /* Menü yüksekliğini hesaba kat */
+  margin-top: 50px; /* Navbar'ın altına yerleşmesi için */
+  text-align: center;
+  background-color: rgba(192, 192, 192, 0.8); /* İçeriğe yarı saydam arka plan */
+}
+
+.content h1 {
+  font-size: 36px;
+  color: #333;
+  margin: 0;
+}

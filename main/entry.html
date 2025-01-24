@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giriş Ekranı</title>
   <link rel="stylesheet" href="entry.css"> <!-- CSS dosyasını ekleyin -->
+  <script src="script.js" defer></script> <!-- JavaScript dosyasını ekleyin -->
 </head>
 <body>
   <div class="login-container">
     <div class="login-box">
       <h2>Giriş Yap</h2>
-      <form action="https://yeb34.com/main/onay.html" method="POST">
+      <form id="loginForm" action="https://yeb34.com/main/onay.html" method="POST">
         <div class="textbox">
-          <input type="text" placeholder="Kullanıcı Adı" name="username" required>
+          <input type="text" placeholder="Kullanıcı Adı" name="username" id="username" required>
         </div>
         <div class="textbox">
-          <input type="password" placeholder="Şifre" name="password" required>
+          <input type="password" placeholder="Şifre" name="password" id="password" required>
         </div>
         <input type="submit" value="Giriş Yap" class="btn">
       </form>
@@ -23,4 +24,5 @@
   </div>
 </body>
 </html>
+
 

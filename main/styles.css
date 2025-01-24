@@ -1,45 +1,41 @@
-/* CSS Reset */
-* {
+/* Menü stilizasyonu */
+.navbar {
+  background-color: #000; /* Navbar'ın arka planını siyah yapıyoruz */
+  padding: 10px 0;
+  position: absolute; /* Navbar'ın sayfa üzerinde sabit kalmasını sağlamak */
+  top: 0; /* Navbar'ı sayfanın üst kısmına hizalayalım */
+  width: 100%; /* Navbar'ın tüm genişliği kapsaması için */
+  z-index: 1; /* Navbar'ın diğer öğelerin üzerinde olmasını sağla */
+}
+
+.navbar ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  display: flex; /* Flexbox kullanarak menüyü yatayda hizalarız */
+  justify-content: center; /* Menüyü yatayda ortalar */
 }
 
-body, html {
-  height: 100%;
+.navbar ul li {
+  margin: 0 20px;
 }
 
-/* Remove default styling for lists, links, and other elements */
-ul, ol {
-  list-style: none;
-}
-
-a {
+.navbar ul li a {
+  color: white;
   text-decoration: none;
-  color: inherit;
+  font-size: 18px;
+  padding: 10px 20px; /* Butonlar için padding ekledik */
+  background-color: #333; /* Butonlar için arka plan rengi */
+  border-radius: 5px; /* Butonlara yuvarlak köşe */
+  transition: background-color 0.3s; /* Hover efekti için geçiş */
 }
 
-button, input, select, textarea {
-  border: none;
-  background: none;
-  outline: none;
-  font-family: inherit;
-  font-size: inherit;
+.navbar ul li a:hover {
+  color: #FFF; /* Menüyü üzerine geldiğinde yazı rengi beyaz olur */
+  background-color: #FF0000; /* Hover efektinde buton rengi değişir */
 }
 
-/* Ensure all images and media scale properly */
-img, picture, video {
-  max-width: 100%;
-  display: block;
-}
-
-/* Ensure a clean base font */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-/* Remove any default focus outlines */
-:focus {
-  outline: none;
+/* Butonlarda aktif durum için stil */
+.navbar ul li a:active {
+  background-color: #CC0000; /* Buton basıldığında daha koyu kırmızı */
 }

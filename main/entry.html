@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kayıt ve Giriş</title>
+  <title>Kayıt Ol</title>
   <link rel="stylesheet" href="style.css"> <!-- CSS dosyasını ekleyebilirsiniz -->
 </head>
 <body>
   <div class="form-container">
-    <!-- Kayıt Formu -->
     <div class="form-box">
       <h2>Kayıt Ol</h2>
       <form id="signupForm" action="http://localhost:3000/signup" method="GET">
@@ -16,19 +15,11 @@
         <input type="password" id="signupPassword" name="password" placeholder="Şifre" required>
         <input type="submit" value="Kayıt Ol">
       </form>
-    </div>
-
-    <!-- Giriş Formu -->
-    <div class="form-box">
-      <h2>Giriş Yap</h2>
-      <form id="loginForm" action="http://localhost:3000/login" method="GET">
-        <input type="text" id="loginUsername" name="username" placeholder="Kullanıcı Adı" required>
-        <input type="password" id="loginPassword" name="password" placeholder="Şifre" required>
-        <input type="submit" value="Giriş Yap">
-      </form>
+      <p>Zaten hesabınız var mı? <a href="login.html">Giriş Yap</a></p>
     </div>
   </div>
 
   <script src="script.js"></script> <!-- JavaScript dosyasını ekleyin -->
 </body>
 </html>
+

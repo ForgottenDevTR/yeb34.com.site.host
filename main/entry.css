@@ -4,6 +4,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
+  background-image: url('images/yazilim.jpg'); /* Added background image */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
   height: 100vh;
   display: flex;
   justify-content: center;

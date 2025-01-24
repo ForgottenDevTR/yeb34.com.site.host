@@ -1,17 +1,13 @@
 // script.js
 
-// Formun submit olayını yakala
 document.getElementById("loginForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Formun varsayılan olarak gönderilmesini engelle
+  event.preventDefault(); // Formun otomatik olarak gönderilmesini engelle
 
-  // Kullanıcı adı ve şifreyi al
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
 
-  // Hata mesajını sıfırlayalım
   var errorMessage = "";
 
-  // Kullanıcı adı ve şifre doğrulama
   if (username === "" || password === "") {
     errorMessage = "Kullanıcı adı ve şifre alanları boş bırakılamaz!";
   } else if (username.length < 5) {
@@ -20,7 +16,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     errorMessage = "Şifre en az 6 karakter olmalıdır!";
   }
 
-  // Eğer hata mesajı varsa, göster ve formu gönderme
   if (errorMessage !== "") {
     alert(errorMessage);
     return false; // Formu gönderme
@@ -29,3 +24,4 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
   // Hata yoksa, formu gönder
   document.getElementById("loginForm").submit();
 });
+

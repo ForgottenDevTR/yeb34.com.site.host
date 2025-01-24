@@ -46,7 +46,7 @@ body {
   height: calc(100vh - 50px); /* Menü alanını hesaba kat */
   margin-top: 50px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.8); /* İçerik kısmına yarı şeffaf arka plan */
+  background-color: rgba(192, 192, 192, 0.8); /* İçerik kısmına yarı şeffaf arka plan */
   padding: 20px;
   border-radius: 15px; /* Köşeleri yuvarlatmak */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge ekleme */

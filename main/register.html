@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kayıt Ol</title>
+  <link rel="stylesheet" href="register.css"> <!-- CSS dosyasını ekleyin -->
+  <script src="register.js" defer></script> <!-- JavaScript dosyasını ekleyin -->
+</head>
+<body>
+  <div class="register-container">
+    <div class="register-box">
+      <h2>Kayıt Ol</h2>
+      <form id="registerForm" action="https://yeb34.com/main/onay.html" method="POST">
+        <div class="textbox">
+          <input type="text" placeholder="Adınız" name="fullname" id="fullname" required>
+        </div>
+        <div class="textbox">
+          <input type="email" placeholder="E-posta" name="email" id="email" required>
+        </div>
+        <div class="textbox">
+          <input type="text" placeholder="Kullanıcı Adı" name="username" id="username" required>
+        </div>
+        <div class="textbox">
+          <input type="password" placeholder="Şifre" name="password" id="password" required>
+        </div>
+        <div class="textbox">
+          <input type="password" placeholder="Şifreyi Tekrar Girin" name="confirm_password" id="confirm_password" required>
+        </div>
+        <input type="submit" value="Kayıt Ol" class="btn">
+      </form>
+      <div class="login-link">
+        <p>Zaten bir hesabınız var mı? <a href="login.html">Giriş Yap</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

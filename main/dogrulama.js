@@ -28,5 +28,5 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
   // Her şey doğruysa, formu gönder
   alert("Giriş başarılı!");
-  // Burada formu sunucuya gönderebiliriz. (Örnek: form.submit();)
+  form.submit();)
 });

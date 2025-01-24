@@ -1,53 +1,45 @@
-/* Genel sıfırlama ve stil */
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+/* Remove default styling for lists, links, and other elements */
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, select, textarea {
+  border: none;
+  background: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Ensure all images and media scale properly */
+img, picture, video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Ensure a clean base font */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0; /* Genel sayfa için gri renk */
-  background-image: url("images/background.jpg"); /* Sayfa arka plan resmi */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; /* Arka planın tüm sayfayı kaplaması */
+  line-height: 1.6;
 }
 
-/* Menü stilizasyonu */
-.navbar {
-  background-color: transparent; /* Navbar'ın arka planını transparan yapıyoruz */
-  padding: 10px 0;
-  position: absolute; /* Navbar'ın sayfa üzerinde sabit kalmasını sağlamak */
-  top: 0; /* Navbar'ı sayfanın üst kısmına hizalayalım */
-  width: 100%; /* Navbar'ın tüm genişliği kapsaması için */
-  z-index: 1; /* Navbar'ın diğer öğelerin üzerinde olmasını sağla */
+/* Remove any default focus outlines */
+:focus {
+  outline: none;
 }
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.navbar ul li {
-  display: inline;
-  margin: 0 20px;
-}
-
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.navbar ul li a:hover {
-  color: #FF0000; /* Menüyü üzerine geldiğinde renk değişir */
-}
-
-/* İçerik kısmı */
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 50px); /* Menü alanını hesaba kat */
-  margin-top: 50px; /* Navbar'ın altına yerleşmesi için */
-  text-align: center;
-  background-color: rgba(192, 192, 192, 0.8); /* İçerik kısmına yarı

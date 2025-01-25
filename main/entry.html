@@ -10,16 +10,39 @@
   <div class="form-container">
     <div class="form-box">
       <h2>Kayıt Ol</h2>
-      <form id="signupForm" action="http://localhost:3000/signup" method="GET">
-        <input type="text" id="signupUsername" name="username" placeholder="Kullanıcı Adı" required>
-        <input type="password" id="signupPassword" name="password" placeholder="Şifre" required>
+      <form id="signupForm" action="http://localhost:3000/signup" method="POST">
+        <!-- Kullanıcı adı alanı -->
+        <div class="input-container">
+          <label for="signupUsername">Kullanıcı Adı:</label>
+          <input type="text" id="signupUsername" name="username" placeholder="Kullanıcı adınızı girin" required>
+          <small id="usernameError" class="error-message"></small>
+        </div>
+
+        <!-- Şifre alanı -->
+        <div class="input-container">
+          <label for="signupPassword">Şifre:</label>
+          <input type="password" id="signupPassword" name="password" placeholder="Şifrenizi girin" required>
+          <small id="passwordError" class="error-message"></small>
+        </div>
+
+        <!-- Şifreyi tekrar girme alanı (isteğe bağlı) -->
+        <div class="input-container">
+          <label for="signupPasswordConfirm">Şifreyi Tekrar Girin:</label>
+          <input type="password" id="signupPasswordConfirm" name="passwordConfirm" placeholder="Şifrenizi tekrar girin" required>
+          <small id="passwordConfirmError" class="error-message"></small>
+        </div>
+
+        <!-- Form gönderme butonu -->
         <input type="submit" value="Kayıt Ol">
       </form>
-      <p>Zaten hesabınız var mı? <a href="register.html">Giriş Yap</a></p>
+
+      <!-- Giriş yap bağlantısı -->
+      <p>Zaten hesabınız var mı? <a href="login.html">Giriş Yap</a></p>
     </div>
   </div>
 
-  <script src="script.js"></script> <!-- JavaScript dosyasını ekleyin -->
+  <script src="script.js"></script> <!-- JavaScript dosyasını ekleyebilirsiniz -->
 </body>
 </html>
+
 
